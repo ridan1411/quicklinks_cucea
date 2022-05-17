@@ -58,8 +58,7 @@
 
         <div class="row" ng-init="getBuild()">
             <div class="col-sm-4 col-lg-2" *ngFor="let build of lstBuilding; let i = index">
-                <a class="block block-link-pop text-center pointer BuildDiv mt-3"
-                    (click)="getAppByBuild(build); getBuildToApp(build)">
+                <a id='all' class="filter block block-link-pop text-center pointer BuildDiv mt-3">
                     <div class="pt-5">
                         <div class="applicationTxt">Todas</div>
                     </div>
@@ -67,35 +66,31 @@
                 </a>
             </div>
             <div class="col-sm-4 col-lg-2" *ngFor="let build of lstBuilding; let i = index">
-                <a class="block block-link-pop text-center pointer BuildDiv mt-3"
-                    (click)="getAppByBuild(build); getBuildToApp(build)">
+                <a id='Nuevo Ingreso' class="filter block block-link-pop text-center pointer BuildDiv mt-3">
                     <div class="pt-5">
-                        <div class="applicationTxt">Nuevo Ingreso</div>
+                        <div class=" applicationTxt">Nuevo Ingreso</div>
                     </div>
                     <div class="block-content block-content-full block-content-mini text-white colorBlock mb-0 pb-0"></div>
                 </a>
             </div>
             <div class="col-sm-4 col-lg-2" *ngFor="let build of lstBuilding; let i = index">
-                <a class="block block-link-pop text-center pointer BuildDiv mt-3"
-                    (click)="getAppByBuild(build); getBuildToApp(build)">
+                <a id='Servicio Social' class="filter block block-link-pop text-center pointer BuildDiv mt-3">
                     <div class="pt-5">
-                        <div class="applicationTxt">Servicio Social</div>
+                        <div class=" applicationTxt">Servicio Social</div>
                     </div>
                     <div class="block-content block-content-full block-content-mini text-white colorBlock mb-0 pb-0"></div>
                 </a>
             </div>
             <div class="col-sm-4 col-lg-2" *ngFor="let build of lstBuilding; let i = index">
-                <a class="block block-link-pop text-center pointer BuildDiv mt-3"
-                    (click)="getAppByBuild(build); getBuildToApp(build)">
+                <a id='Practicas Profesionales' class="filter block block-link-pop text-center pointer BuildDiv mt-3">
                     <div class="pt-5">
-                        <div class="applicationTxt">Practicas Profesionales</div>
+                        <div class=" applicationTxt">Practicas Profesionales</div>
                     </div>
                     <div class="block-content block-content-full block-content-mini text-white colorBlock mb-0 pb-0"></div>
                 </a>
             </div>
             <div class="col-sm-4 col-lg-2" *ngFor="let build of lstBuilding; let i = index">
-                <a class="block block-link-pop text-center pointer BuildDiv mt-3"
-                    (click)="getAppByBuild(build); getBuildToApp(build)">
+                <a id='Titulación' class="filter block block-link-pop text-center pointer BuildDiv mt-3">
                     <div class="pt-5">
                         <div class="applicationTxt">Titulación</div>
                     </div>
@@ -103,8 +98,7 @@
                 </a>
             </div>
             <div class="col-sm-4 col-lg-2" *ngFor="let build of lstBuilding; let i = index">
-                <a class="block block-link-pop text-center pointer BuildDiv mt-3"
-                    (click)="getAppByBuild(build); getBuildToApp(build)">
+                <a id='Talleres' class="filter block block-link-pop text-center pointer BuildDiv mt-3">
                     <div class="pt-5">
                         <div class="applicationTxt">Talleres</div>
                     </div>
@@ -140,7 +134,7 @@
                 @endphp
             @endif
 
-            <section id="link_{{$link->id}}" class="{{$link->carrer}}">
+            <section id="link_{{$link->id}}" class="link {{$link->carrer}}">
                 <div class="container px-5">
                     <div class="row gx-5 align-items-center">
                         <div class="col-lg-6 {{$class1}} hola">
