@@ -21,10 +21,39 @@ return new class extends Migration
             $table->enum('category', ['all', 'Nuevo Ingreso', 'Servicio Social', 'Practicas Profesionales', 'Titulación', 'Talleres']);
             $table->string('img')->nullable();
             $table->string('excerpt');
-            $table->string('body', '255')->nullable();
+            $table->text('body')->nullable();
             $table->timestamps();
         });
     }
+
+
+    /*
+
+
+        "default": "all",
+        "options": {
+            "all": "Todas",
+            "Tecnologías de la Información": "Tecnologías de la Información",
+            "Administración": "Administración",
+            "Contabilidad": "Contabilidad",
+            "Finanzas": "Finanzas",
+            "Gastronomía": "Gastronomía"
+        }
+
+
+        "default": "all",
+        "options": {
+            "all": "Todas",
+            "Nuevo Ingreso": "Nuevo Ingreso",
+            "Administración": "Administración",
+            "Servicio Social": "Servicio Social",
+            "Practicas Profesionales": "Practicas Profesionales",
+            "Titulación": "Gastronomía",
+            "Talleres": "Talleres"
+        }
+
+    */
+
 
     /**
      * Reverse the migrations.

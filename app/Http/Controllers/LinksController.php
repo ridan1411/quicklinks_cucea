@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Links;
+use App\Models\Link;
 use Illuminate\Http\Request;
 
 class LinksController extends Controller
@@ -14,7 +14,11 @@ class LinksController extends Controller
      */
     public function index()
     {
-        //
+        $links = Link::all();
+        //dump($links);
+
+        return view('welcome', compact('links'));
+
     }
 
     /**
@@ -41,10 +45,10 @@ class LinksController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Links  $links
+     * @param  \App\Models\Link  $link
      * @return \Illuminate\Http\Response
      */
-    public function show(Links $links)
+    public function show(Link $link)
     {
         //
     }
@@ -52,10 +56,10 @@ class LinksController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Links  $links
+     * @param  \App\Models\Link  $link
      * @return \Illuminate\Http\Response
      */
-    public function edit(Links $links)
+    public function edit(Link $link)
     {
         //
     }
@@ -64,10 +68,10 @@ class LinksController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Links  $links
+     * @param  \App\Models\Link  $link
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Links $links)
+    public function update(Request $request, Link $link)
     {
         //
     }
@@ -75,10 +79,10 @@ class LinksController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Links  $links
+     * @param  \App\Models\Link  $link
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Links $links)
+    public function destroy(Link $link)
     {
         //
     }

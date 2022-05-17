@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LinksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,11 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
-
+*/
+Route::get('/', [LinksController::class, 'index']);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
